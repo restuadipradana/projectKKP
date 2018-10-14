@@ -15,8 +15,8 @@ char auth[] = "bec70c97995e4f0ba03faca2ef6ed8b5";
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "DILO3";
-char pass[] = "DiloBSD123";
+char ssid[] = "wifi";
+char pass[] = "87654321";
 
 void potensio()
 {
