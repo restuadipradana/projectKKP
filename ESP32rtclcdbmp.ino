@@ -24,13 +24,17 @@ All text above, and the splash screen must be included in any redistribution
 #include <Wire.h>
 #include "RTClib.h"
 
+
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+
 // If using software SPI (the default case):
 #define OLED_MOSI   23
 #define OLED_CLK   18
 #define OLED_DC    4
 #define OLED_CS    5
 #define OLED_RESET 15
-Adafruit_SSD1306 display(OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 /* Uncomment this block to use hardware SPI
 #define OLED_DC     6
@@ -42,9 +46,6 @@ SFE_BMP180 pressure;
 #define ALTITUDE 25.0
 RTC_DS3231 rtc;
 
-#if (SSD1306_LCDHEIGHT != 64)
-#error("Height incorrect, please fix Adafruit_SSD1306.h!");
-#endif
 
 void setup()   {                
   Serial.begin(9600);
