@@ -36,12 +36,6 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT,
   OLED_MOSI, OLED_CLK, OLED_DC, OLED_RESET, OLED_CS);
 
 
-
-#define NUMFLAKES     10 // Number of snowflakes in the animation example
-
-#define LOGO_HEIGHT   16
-#define LOGO_WIDTH    16
-
 void setup() {
   Serial.begin(9600);
 
